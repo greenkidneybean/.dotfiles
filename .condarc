@@ -1,0 +1,7 @@
+channels:
+#  - anaconda
+  - conda-forge
+  - bioconda
+  - defaults
+ssl_verify: true
+channel_priority: strict
