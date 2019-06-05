@@ -148,7 +148,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export HOMEBREW_GITHUB_API_TOKEN=a740b011ff671418fccfa2aba8abb41462008223
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
