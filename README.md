@@ -3,7 +3,7 @@
 Quick Setup:
 ```
 cd ~
-git clone 
+git clone https://github.com/greenkidneybean/.dotfiles.git
 cd .dotfiles
 sh dotfiles.sh
 ```
