@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-git clone https://github.com/greenkidneybean/.dotfiles
-cd .dotfiles
-
 ln -sv ".iterm2" ~
 ln -sv ".condarc" ~
 ln -sv ".gitconfig" ~
