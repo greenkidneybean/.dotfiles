@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# backup ~/ dotfiles to ~/.dotfiles_backup 
+# backup ~/ dotfiles to ~/.dotfiles_backup
 # symlink dotfiles/* to ~/
 
 echo "creating symlinks for project dotfiles..."
@@ -31,4 +31,11 @@ popd > /dev/null 2>&1
 if [ -d ~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]
 then
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+# check for vim-plug
+if [ -d ~/.vim/autoload/plug.vim ]
+then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
