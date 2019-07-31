@@ -121,7 +121,6 @@ extract() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-#  zsh-syntax-highlighting
   zsh-autosuggestions
 )
 
