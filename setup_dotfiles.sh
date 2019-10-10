@@ -28,14 +28,20 @@ done
 popd > /dev/null 2>&1
 
 # install zsh plugins
-if [ -d ~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
 then
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
 
-# check for vim-plug
-if [ -d ~/.vim/autoload/plug.vim ]
+# check for vim plugin file
+if [ ! -f ~/.vim/autoload/plug.vim ]
 then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+
+# setup iterm preferences
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/dotfiles/.iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
